@@ -13,6 +13,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let measurementStore = MeasurementStore()
 
     func applicationDidFinishLaunching(_ notification: Notification) {
+        // Initialize CaliberState for shortcuts
+        CaliberState.shared.configure(store: measurementStore)
+
         setupStatusItem()
         setupPopover()
         registerGlobalHotkey()
@@ -224,3 +227,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSApp.terminate(nil)
     }
 }
+
+// MARK: - Global State for Shortcuts
+
+@MainActor
+final class CaliberState {
+    static let shared = CaliberState()
+
+    var store: MeasurementStore?
+
+    private init() {}
+
+    func configure(store: MeasurementStore) {
+        self.store = store
+    }
+
+    func startMeasuring() {
+        store?.isMeasuring = true
+    }
+}
+

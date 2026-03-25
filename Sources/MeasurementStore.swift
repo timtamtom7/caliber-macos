@@ -223,6 +223,17 @@ class MeasurementStore: ObservableObject {
         pasteboard.setString(last.expandedFormat, forType: .string)
     }
 
+    // MARK: - Measurement Control
+
+    func startMeasuring() {
+        isMeasuring = true
+        currentMeasurement = nil
+    }
+
+    func stopMeasuring() {
+        isMeasuring = false
+    }
+
     // MARK: - Unit Conversion
 
     func convert(width: Int, height: Int, from: MeasurementUnit, to: MeasurementUnit) -> (width: Double, height: Double) {
