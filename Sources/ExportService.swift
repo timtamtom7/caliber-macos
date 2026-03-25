@@ -1,6 +1,6 @@
 import Foundation
 
-struct MeasurementExport {
+struct MeasurementExport: Codable {
     let records: [MeasurementRecord]
     let exportDate: Date
     let version: String
