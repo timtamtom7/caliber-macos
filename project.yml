@@ -49,4 +49,46 @@ targets:
     entitlements:
       path: Sources/Caliber.entitlements
       properties:
-        com.apple.security.app-sandbox: false
+        com.apple.security.app-sandbox: true
+        com.apple.security.application-groups:
+          - group.com.caliber.mac
+    dependencies:
+      - target: CaliberWidgets
+        embed: true
+
+  CaliberWidgets:
+    type: app-extension
+    platform: macOS
+    sources:
+      - path: CaliberWidgets
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.caliber.app.widgets
+        PRODUCT_NAME: CaliberWidgets
+        LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks"
+        SKIP_INSTALL: YES
+        SWIFT_VERSION: "5.9"
+        MACOSX_DEPLOYMENT_TARGET: "14.0"
+        CODE_SIGN_IDENTITY: "-"
+        CODE_SIGN_STYLE: Manual
+        DEVELOPMENT_TEAM: ""
+        ENABLE_HARDENED_RUNTIME: YES
+    info:
+      path: CaliberWidgets/Info.plist
+      properties:
+        CFBundleName: CaliberWidgets
+        CFBundleDisplayName: Caliber Widgets
+        CFBundleIdentifier: com.caliber.app.widgets
+        CFBundleVersion: "1"
+        CFBundleShortVersionString: "1.0.0"
+        CFBundlePackageType: XPC!
+        CFBundleExecutable: CaliberWidgets
+        LSMinimumSystemVersion: "14.0"
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+    entitlements:
+      path: CaliberWidgets/CaliberWidgets.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.application-groups:
+          - group.com.caliber.mac

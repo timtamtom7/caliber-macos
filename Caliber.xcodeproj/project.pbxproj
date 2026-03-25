@@ -11,13 +11,39 @@
 		07123454BB79A8C884ECAA07 /* MeasurementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F1EAE3DFD0471B4A36081B /* MeasurementService.swift */; };
 		177EECD563CC348C85FA0BC7 /* MeasurementHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D9F4E5D9BD0CFA771E777D /* MeasurementHistoryView.swift */; };
 		34991A92027F33DD252C5B38 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888A57207F5C0F573D8573A9 /* ContentView.swift */; };
+		39B1D585C4ACF8FF033DF4EA /* CaliberWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D1E1D7764738A266C9317 /* CaliberWidgets.swift */; };
 		3E55273F9ED6DAC2409637E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDB40F89D612C4C9C4E5B96 /* AppDelegate.swift */; };
 		425A391EDAEA21D0613E97EE /* MeasurementStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAD6F49A270AB640461F28E /* MeasurementStore.swift */; };
 		43DBC72CF032BC51E1C14456 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D718D3351B401148635D69FC /* main.swift */; };
+		634923E01E9705F2314FBA26 /* CaliberWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6A0B2FCA3DDBE5EE17BA77DA /* CaliberWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8025DC072161B36E2389EBC8 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6E9B85892622C5F2615CB0 /* Theme.swift */; };
 		95C731AE319140627026D6D4 /* iCloudSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D686A567779DCE13B19E67 /* iCloudSyncManager.swift */; };
 		BEECEE76B8DC2CE363F9E873 /* MeasurementOverlayWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B05B842BC8B90D3815729 /* MeasurementOverlayWindow.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4BA09051F7C028F316683F3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2EAE6C2E05F6D4A857549DBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC478827C82815608BE40F59;
+			remoteInfo = CaliberWidgets;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		30820F00CBE4A40D26C0C878 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				634923E01E9705F2314FBA26 /* CaliberWidgets.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2F90D98DD8FE1290B2753BDB /* Caliber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Caliber.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,12 +52,16 @@
 		5E6E9B85892622C5F2615CB0 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		61F1EAE3DFD0471B4A36081B /* MeasurementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementService.swift; sourceTree = "<group>"; };
 		68D9F4E5D9BD0CFA771E777D /* MeasurementHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementHistoryView.swift; sourceTree = "<group>"; };
+		6A0B2FCA3DDBE5EE17BA77DA /* CaliberWidgets.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CaliberWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		71D686A567779DCE13B19E67 /* iCloudSyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCloudSyncManager.swift; sourceTree = "<group>"; };
 		74A57E0ACB4706101B88876A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		779C907AEDA04751F487132F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		85E9F59A03763A339CCA0CDE /* CaliberWidgets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CaliberWidgets.entitlements; sourceTree = "<group>"; };
 		888A57207F5C0F573D8573A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		911B05B842BC8B90D3815729 /* MeasurementOverlayWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementOverlayWindow.swift; sourceTree = "<group>"; };
 		AEAD6F49A270AB640461F28E /* MeasurementStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementStore.swift; sourceTree = "<group>"; };
 		D718D3351B401148635D69FC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		DB7D1E1D7764738A266C9317 /* CaliberWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaliberWidgets.swift; sourceTree = "<group>"; };
 		EBDB40F89D612C4C9C4E5B96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -45,10 +75,21 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		4297957D7BCA1CFEADC557C5 /* CaliberWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				85E9F59A03763A339CCA0CDE /* CaliberWidgets.entitlements */,
+				DB7D1E1D7764738A266C9317 /* CaliberWidgets.swift */,
+				779C907AEDA04751F487132F /* Info.plist */,
+			);
+			path = CaliberWidgets;
+			sourceTree = "<group>";
+		};
 		9D7EF39DFE9D6ADEBD12F65E /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				2F90D98DD8FE1290B2753BDB /* Caliber.app */,
+				6A0B2FCA3DDBE5EE17BA77DA /* CaliberWidgets.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +97,7 @@
 		B53CC92CC7E7053AB82C4A41 = {
 			isa = PBXGroup;
 			children = (
+				4297957D7BCA1CFEADC557C5 /* CaliberWidgets */,
 				C45EDB64194D875C2E56088F /* Sources */,
 				9D7EF39DFE9D6ADEBD12F65E /* Products */,
 			);
@@ -87,15 +129,32 @@
 			buildConfigurationList = F0F73A7ED15D6EE87EA8E686 /* Build configuration list for PBXNativeTarget "Caliber" */;
 			buildPhases = (
 				5B0A81B4A3400101DF1E909B /* Sources */,
+				30820F00CBE4A40D26C0C878 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				77D6FEB94A649F446EB822D9 /* PBXTargetDependency */,
 			);
 			name = Caliber;
 			productName = Caliber;
 			productReference = 2F90D98DD8FE1290B2753BDB /* Caliber.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CC478827C82815608BE40F59 /* CaliberWidgets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5EF28A72C5E984BA634EB89 /* Build configuration list for PBXNativeTarget "CaliberWidgets" */;
+			buildPhases = (
+				3529341EFEC77D3772DAC185 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CaliberWidgets;
+			productName = CaliberWidgets;
+			productReference = 6A0B2FCA3DDBE5EE17BA77DA /* CaliberWidgets.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -107,6 +166,10 @@
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					4D356CDC3A5B71314524C9B0 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+					CC478827C82815608BE40F59 = {
 						DevelopmentTeam = "";
 						ProvisioningStyle = Manual;
 					};
@@ -125,11 +188,20 @@
 			projectRoot = "";
 			targets = (
 				4D356CDC3A5B71314524C9B0 /* Caliber */,
+				CC478827C82815608BE40F59 /* CaliberWidgets */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3529341EFEC77D3772DAC185 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39B1D585C4ACF8FF033DF4EA /* CaliberWidgets.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5B0A81B4A3400101DF1E909B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -148,6 +220,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		77D6FEB94A649F446EB822D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC478827C82815608BE40F59 /* CaliberWidgets */;
+			targetProxy = 4BA09051F7C028F316683F3C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0D2D822BDE779DFA7467B037 /* Debug */ = {
@@ -231,6 +311,46 @@
 			};
 			name = Debug;
 		};
+		66EAF00B8428277D4B615A96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CaliberWidgets/CaliberWidgets.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = CaliberWidgets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.caliber.app.widgets;
+				PRODUCT_NAME = CaliberWidgets;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		B87AD4BCDDB6D88A3F7D5DEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CaliberWidgets/CaliberWidgets.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = CaliberWidgets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.caliber.app.widgets;
+				PRODUCT_NAME = CaliberWidgets;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
 		D407E1E227B5D8C2C50537C7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -313,6 +433,15 @@
 			buildConfigurations = (
 				56943CEB2B6CDCB8E13FB6A3 /* Debug */,
 				D407E1E227B5D8C2C50537C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B5EF28A72C5E984BA634EB89 /* Build configuration list for PBXNativeTarget "CaliberWidgets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66EAF00B8428277D4B615A96 /* Debug */,
+				B87AD4BCDDB6D88A3F7D5DEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
