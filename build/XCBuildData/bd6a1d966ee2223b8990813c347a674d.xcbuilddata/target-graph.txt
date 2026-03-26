@@ -1,0 +1,4 @@
+Target dependency graph (2 targets)
+Target 'Caliber' in project 'Caliber'
+➜ Explicit dependency on target 'CaliberWidgets' in project 'Caliber'
+Target 'CaliberWidgets' in project 'Caliber' (no dependencies)

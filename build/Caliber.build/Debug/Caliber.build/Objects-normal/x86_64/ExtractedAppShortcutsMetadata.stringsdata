@@ -1,0 +1,30 @@
+{
+  "source" : "\/Users\/mauriello\/Dev\/caliber-macos\/Sources\/Services\/ShortcutsManager.swift",
+  "version" : 1,
+  "tables" : {
+    "AppShortcuts" : [
+      {
+        "location" : {
+          "startingColumn" : 0,
+          "startingLine" : 7
+        },
+        "key" : "Get last ${applicationName} measurement",
+        "values" : [
+          "Get last ${applicationName} measurement",
+          "What was the last measurement in ${applicationName}"
+        ]
+      },
+      {
+        "location" : {
+          "startingColumn" : 0,
+          "startingLine" : 7
+        },
+        "key" : "Start ${applicationName}",
+        "values" : [
+          "Start ${applicationName}",
+          "Measure with ${applicationName}"
+        ]
+      }
+    ]
+  }
+}

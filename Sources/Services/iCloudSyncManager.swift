@@ -81,7 +81,9 @@ final class CaliberSyncManager: ObservableObject {
     }
 
     private func buildPayload() -> SyncPayload {
-        let store = CaliberState.shared.store!
+        guard let store = CaliberState.shared.store else {
+            return SyncPayload(presets: [], selectedUnit: MeasurementUnit.pt.rawValue, dpi: 144, settings: .init(autoStart: false, showOverlay: true))
+        }
 
         let settings = SyncPayload.CaliberSettings(
             autoStart: UserDefaults.standard.bool(forKey: "caliber_autoStart"),

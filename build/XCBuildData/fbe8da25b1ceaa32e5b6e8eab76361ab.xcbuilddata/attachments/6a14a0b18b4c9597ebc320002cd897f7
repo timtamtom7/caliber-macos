@@ -1,0 +1,189 @@
+{
+  "" : {
+    "diagnostics" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/Caliber-primary.dia",
+    "emit-module-dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/Caliber-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/Caliber-primary-emit-module.dia",
+    "pch" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/Caliber-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/Caliber-primary.swiftdeps"
+  },
+  "/Users/mauriello/Dev/caliber-macos/Sources/AppDelegate.swift" : {
+    "const-values" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/AppDelegate.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/AppDelegate.d",
+    "diagnostics" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/AppDelegate.dia",
+    "index-unit-output-path" : "/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/AppDelegate.o",
+    "llvm-bc" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/AppDelegate.bc",
+    "object" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/AppDelegate.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/AppDelegate.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/AppDelegate~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/caliber-macos/Sources/CameraRuler.swift" : {
+    "const-values" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/CameraRuler.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/CameraRuler.d",
+    "diagnostics" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/CameraRuler.dia",
+    "index-unit-output-path" : "/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/CameraRuler.o",
+    "llvm-bc" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/CameraRuler.bc",
+    "object" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/CameraRuler.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/CameraRuler.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/CameraRuler~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/caliber-macos/Sources/ContentView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/caliber-macos/Sources/ExportService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/ExportService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/ExportService.d",
+    "diagnostics" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/ExportService.dia",
+    "index-unit-output-path" : "/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/ExportService.o",
+    "llvm-bc" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/ExportService.bc",
+    "object" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/ExportService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/ExportService.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/ExportService~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/caliber-macos/Sources/MeasurementAnalysis.swift" : {
+    "const-values" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementAnalysis.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementAnalysis.d",
+    "diagnostics" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementAnalysis.dia",
+    "index-unit-output-path" : "/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementAnalysis.o",
+    "llvm-bc" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementAnalysis.bc",
+    "object" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementAnalysis.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementAnalysis.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementAnalysis~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/caliber-macos/Sources/MeasurementHistory.swift" : {
+    "const-values" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementHistory.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementHistory.d",
+    "diagnostics" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementHistory.dia",
+    "index-unit-output-path" : "/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementHistory.o",
+    "llvm-bc" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementHistory.bc",
+    "object" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementHistory.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementHistory.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementHistory~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/caliber-macos/Sources/MeasurementHistoryView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementHistoryView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementHistoryView.d",
+    "diagnostics" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementHistoryView.dia",
+    "index-unit-output-path" : "/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementHistoryView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementHistoryView.bc",
+    "object" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementHistoryView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementHistoryView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementHistoryView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/caliber-macos/Sources/MeasurementIntelligence.swift" : {
+    "const-values" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementIntelligence.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementIntelligence.d",
+    "diagnostics" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementIntelligence.dia",
+    "index-unit-output-path" : "/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementIntelligence.o",
+    "llvm-bc" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementIntelligence.bc",
+    "object" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementIntelligence.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementIntelligence.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementIntelligence~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/caliber-macos/Sources/MeasurementOverlayWindow.swift" : {
+    "const-values" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementOverlayWindow.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementOverlayWindow.d",
+    "diagnostics" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementOverlayWindow.dia",
+    "index-unit-output-path" : "/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementOverlayWindow.o",
+    "llvm-bc" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementOverlayWindow.bc",
+    "object" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementOverlayWindow.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementOverlayWindow.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementOverlayWindow~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/caliber-macos/Sources/MeasurementService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementService.d",
+    "diagnostics" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementService.dia",
+    "index-unit-output-path" : "/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementService.o",
+    "llvm-bc" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementService.bc",
+    "object" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementService.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementService~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/caliber-macos/Sources/MeasurementStore.swift" : {
+    "const-values" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementStore.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementStore.d",
+    "diagnostics" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementStore.dia",
+    "index-unit-output-path" : "/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementStore.o",
+    "llvm-bc" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementStore.bc",
+    "object" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementStore.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementStore.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/MeasurementStore~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/caliber-macos/Sources/Models/Caliber.swift" : {
+    "const-values" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/Caliber.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/Caliber.d",
+    "diagnostics" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/Caliber.dia",
+    "index-unit-output-path" : "/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/Caliber.o",
+    "llvm-bc" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/Caliber.bc",
+    "object" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/Caliber.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/Caliber.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/Caliber~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/caliber-macos/Sources/Services/CaliberService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/CaliberService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/CaliberService.d",
+    "diagnostics" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/CaliberService.dia",
+    "index-unit-output-path" : "/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/CaliberService.o",
+    "llvm-bc" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/CaliberService.bc",
+    "object" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/CaliberService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/CaliberService.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/CaliberService~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/caliber-macos/Sources/Services/ShortcutsManager.swift" : {
+    "const-values" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/ShortcutsManager.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/ShortcutsManager.d",
+    "diagnostics" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/ShortcutsManager.dia",
+    "index-unit-output-path" : "/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/ShortcutsManager.o",
+    "llvm-bc" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/ShortcutsManager.bc",
+    "object" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/ShortcutsManager.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/ShortcutsManager.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/ShortcutsManager~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/caliber-macos/Sources/Services/iCloudSyncManager.swift" : {
+    "const-values" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/iCloudSyncManager.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/iCloudSyncManager.d",
+    "diagnostics" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/iCloudSyncManager.dia",
+    "index-unit-output-path" : "/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/iCloudSyncManager.o",
+    "llvm-bc" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/iCloudSyncManager.bc",
+    "object" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/iCloudSyncManager.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/iCloudSyncManager.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/iCloudSyncManager~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/caliber-macos/Sources/Theme.swift" : {
+    "const-values" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/Theme.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/Theme.d",
+    "diagnostics" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/Theme.dia",
+    "index-unit-output-path" : "/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/Theme.o",
+    "llvm-bc" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/Theme.bc",
+    "object" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/Theme.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/Theme.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/Theme~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/caliber-macos/Sources/UnitsConverter.swift" : {
+    "const-values" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/UnitsConverter.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/UnitsConverter.d",
+    "diagnostics" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/UnitsConverter.dia",
+    "index-unit-output-path" : "/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/UnitsConverter.o",
+    "llvm-bc" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/UnitsConverter.bc",
+    "object" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/UnitsConverter.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/UnitsConverter.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/UnitsConverter~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/caliber-macos/Sources/main.swift" : {
+    "const-values" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/main.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/main.d",
+    "diagnostics" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/main.dia",
+    "index-unit-output-path" : "/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/main.o",
+    "llvm-bc" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/main.bc",
+    "object" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/main.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/main.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/Caliber.build/Objects-normal/arm64/main~partial.swiftmodule"
+  }
+}

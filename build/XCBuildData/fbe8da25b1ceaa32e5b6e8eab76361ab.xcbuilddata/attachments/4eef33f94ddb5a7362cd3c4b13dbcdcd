@@ -1,0 +1,19 @@
+{
+  "" : {
+    "diagnostics" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/CaliberWidgets.build/Objects-normal/x86_64/CaliberWidgets-primary.dia",
+    "emit-module-dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/CaliberWidgets.build/Objects-normal/x86_64/CaliberWidgets-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/CaliberWidgets.build/Objects-normal/x86_64/CaliberWidgets-primary-emit-module.dia",
+    "pch" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/CaliberWidgets.build/Objects-normal/x86_64/CaliberWidgets-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/CaliberWidgets.build/Objects-normal/x86_64/CaliberWidgets-primary.swiftdeps"
+  },
+  "/Users/mauriello/Dev/caliber-macos/CaliberWidgets/CaliberWidgets.swift" : {
+    "const-values" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/CaliberWidgets.build/Objects-normal/x86_64/CaliberWidgets.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/CaliberWidgets.build/Objects-normal/x86_64/CaliberWidgets.d",
+    "diagnostics" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/CaliberWidgets.build/Objects-normal/x86_64/CaliberWidgets.dia",
+    "index-unit-output-path" : "/Caliber.build/Debug/CaliberWidgets.build/Objects-normal/x86_64/CaliberWidgets.o",
+    "llvm-bc" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/CaliberWidgets.build/Objects-normal/x86_64/CaliberWidgets.bc",
+    "object" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/CaliberWidgets.build/Objects-normal/x86_64/CaliberWidgets.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/CaliberWidgets.build/Objects-normal/x86_64/CaliberWidgets.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/caliber-macos/build/Caliber.build/Debug/CaliberWidgets.build/Objects-normal/x86_64/CaliberWidgets~partial.swiftmodule"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "source": "/Users/mauriello/Dev/caliber-macos/Sources/Services/ShortcutsManager.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Last Measurement",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 14
+        }
+      },
+      {
+        "comment": "",
+        "key": "Start Measuring",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 24
+        }
+      },
+      {
+        "comment": "",
+        "key": "Get Last Measurement",
+        "location": {
+          "startingColumn": 49,
+          "startingLine": 33
+        }
+      },
+      {
+        "comment": "",
+        "key": "Returns the most recent measurement from Caliber",
+        "location": {
+          "startingColumn": 48,
+          "startingLine": 34
+        }
+      },
+      {
+        "comment": "",
+        "key": "Last: %@. Screen: %@. At %@",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 45
+        }
+      },
+      {
+        "comment": "",
+        "key": "No measurements yet. Start Caliber to measure.",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 42
+        }
+      },
+      {
+        "comment": "",
+        "key": "Start Measuring",
+        "location": {
+          "startingColumn": 49,
+          "startingLine": 52
+        }
+      },
+      {
+        "comment": "",
+        "key": "Starts a new measurement in Caliber",
+        "location": {
+          "startingColumn": 48,
+          "startingLine": 53
+        }
+      },
+      {
+        "comment": "",
+        "key": "Caliber measuring mode started",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 59
+        }
+      }
+    ]
+  },
+  "version": 1
+}

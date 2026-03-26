@@ -181,7 +181,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         let measurement = Measurement(
             widthPx: widthPx,
-            heightPx: heightPt,
+            heightPx: heightPx,
             widthPt: widthPt,
             heightPt: heightPt,
             screenName: screen.localizedName
