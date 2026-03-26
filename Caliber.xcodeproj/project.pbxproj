@@ -20,11 +20,13 @@
 		634923E01E9705F2314FBA26 /* CaliberWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6A0B2FCA3DDBE5EE17BA77DA /* CaliberWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7B45863AC8CE828E0CC44651 /* MeasurementHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DA9530A16A406D45403B09 /* MeasurementHistory.swift */; };
 		8025DC072161B36E2389EBC8 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6E9B85892622C5F2615CB0 /* Theme.swift */; };
+		95399D371788D1C86BF58F24 /* Caliber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2ACBA354C6B631A6887157 /* Caliber.swift */; };
 		95C731AE319140627026D6D4 /* iCloudSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D686A567779DCE13B19E67 /* iCloudSyncManager.swift */; };
 		BEECEE76B8DC2CE363F9E873 /* MeasurementOverlayWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B05B842BC8B90D3815729 /* MeasurementOverlayWindow.swift */; };
 		C42278FE83B99F41D2C21C5E /* CameraRuler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400B5564FB9979097A0D7B1 /* CameraRuler.swift */; };
+		ECE42B9D1F2C37ED058601D9 /* CaliberService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE4DE630E443A4A1462F343 /* CaliberService.swift */; };
 		F5B97B3694F2BBEE0DAE5200 /* UnitsConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACEDD3C206058E706DCF63F /* UnitsConverter.swift */; };
-		AABBCCDD11223344AABBCCEE /* MeasurementIntelligence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABBCCDD11223344EEFF0011 /* MeasurementIntelligence.swift */; };
+		F5FCA308D6365A8789490F1E /* MeasurementIntelligence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2FE3B9742C6CC024A0F132 /* MeasurementIntelligence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2E2ACBA354C6B631A6887157 /* Caliber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caliber.swift; sourceTree = "<group>"; };
 		2F90D98DD8FE1290B2753BDB /* Caliber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Caliber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48E971686C6D0FC41F3E0229 /* ExportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportService.swift; sourceTree = "<group>"; };
 		4E0340FC52683C544BBF6DFE /* ShortcutsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsManager.swift; sourceTree = "<group>"; };
@@ -64,23 +67,25 @@
 		71D686A567779DCE13B19E67 /* iCloudSyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCloudSyncManager.swift; sourceTree = "<group>"; };
 		74A57E0ACB4706101B88876A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		779C907AEDA04751F487132F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7DE4DE630E443A4A1462F343 /* CaliberService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaliberService.swift; sourceTree = "<group>"; };
 		8400B5564FB9979097A0D7B1 /* CameraRuler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRuler.swift; sourceTree = "<group>"; };
 		85E9F59A03763A339CCA0CDE /* CaliberWidgets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CaliberWidgets.entitlements; sourceTree = "<group>"; };
 		888A57207F5C0F573D8573A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		911B05B842BC8B90D3815729 /* MeasurementOverlayWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementOverlayWindow.swift; sourceTree = "<group>"; };
 		AEAD6F49A270AB640461F28E /* MeasurementStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementStore.swift; sourceTree = "<group>"; };
+		BB2FE3B9742C6CC024A0F132 /* MeasurementIntelligence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementIntelligence.swift; sourceTree = "<group>"; };
 		D718D3351B401148635D69FC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		DACEDD3C206058E706DCF63F /* UnitsConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsConverter.swift; sourceTree = "<group>"; };
 		DB7D1E1D7764738A266C9317 /* CaliberWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaliberWidgets.swift; sourceTree = "<group>"; };
 		EBDB40F89D612C4C9C4E5B96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEE4C18095BC67D048B68A39 /* MeasurementAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementAnalysis.swift; sourceTree = "<group>"; };
-		AABBCCDD11223344EEFF0011 /* MeasurementIntelligence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementIntelligence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		22BB9C48EE457C6C8A8F3942 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				7DE4DE630E443A4A1462F343 /* CaliberService.swift */,
 				71D686A567779DCE13B19E67 /* iCloudSyncManager.swift */,
 				4E0340FC52683C544BBF6DFE /* ShortcutsManager.swift */,
 			);
@@ -115,6 +120,14 @@
 			);
 			sourceTree = "<group>";
 		};
+		BC8B8FA28BC12D5F91F45AA5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2E2ACBA354C6B631A6887157 /* Caliber.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		C45EDB64194D875C2E56088F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,14 +139,15 @@
 				74A57E0ACB4706101B88876A /* Info.plist */,
 				D718D3351B401148635D69FC /* main.swift */,
 				FEE4C18095BC67D048B68A39 /* MeasurementAnalysis.swift */,
-				AABBCCDD11223344EEFF0011 /* MeasurementIntelligence.swift */,
 				69DA9530A16A406D45403B09 /* MeasurementHistory.swift */,
 				68D9F4E5D9BD0CFA771E777D /* MeasurementHistoryView.swift */,
+				BB2FE3B9742C6CC024A0F132 /* MeasurementIntelligence.swift */,
 				911B05B842BC8B90D3815729 /* MeasurementOverlayWindow.swift */,
 				61F1EAE3DFD0471B4A36081B /* MeasurementService.swift */,
 				AEAD6F49A270AB640461F28E /* MeasurementStore.swift */,
 				5E6E9B85892622C5F2615CB0 /* Theme.swift */,
 				DACEDD3C206058E706DCF63F /* UnitsConverter.swift */,
+				BC8B8FA28BC12D5F91F45AA5 /* Models */,
 				22BB9C48EE457C6C8A8F3942 /* Services */,
 			);
 			path = Sources;
@@ -225,12 +239,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E55273F9ED6DAC2409637E6 /* AppDelegate.swift in Sources */,
+				95399D371788D1C86BF58F24 /* Caliber.swift in Sources */,
+				ECE42B9D1F2C37ED058601D9 /* CaliberService.swift in Sources */,
 				C42278FE83B99F41D2C21C5E /* CameraRuler.swift in Sources */,
 				34991A92027F33DD252C5B38 /* ContentView.swift in Sources */,
 				522A76D9CF0E32ADC37357C3 /* ExportService.swift in Sources */,
 				338892052710B569235B19A2 /* MeasurementAnalysis.swift in Sources */,
 				7B45863AC8CE828E0CC44651 /* MeasurementHistory.swift in Sources */,
 				177EECD563CC348C85FA0BC7 /* MeasurementHistoryView.swift in Sources */,
+				F5FCA308D6365A8789490F1E /* MeasurementIntelligence.swift in Sources */,
 				BEECEE76B8DC2CE363F9E873 /* MeasurementOverlayWindow.swift in Sources */,
 				07123454BB79A8C884ECAA07 /* MeasurementService.swift in Sources */,
 				425A391EDAEA21D0613E97EE /* MeasurementStore.swift in Sources */,
@@ -239,7 +256,6 @@
 				F5B97B3694F2BBEE0DAE5200 /* UnitsConverter.swift in Sources */,
 				95C731AE319140627026D6D4 /* iCloudSyncManager.swift in Sources */,
 				43DBC72CF032BC51E1C14456 /* main.swift in Sources */,
-				AABBCCDD11223344AABBCCEE /* MeasurementIntelligence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
