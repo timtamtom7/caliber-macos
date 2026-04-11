@@ -83,8 +83,8 @@ struct CaliberProvider: TimelineProvider {
         MeasurementEntry(
             date: Date(),
             measurements: [
-                StoredMeasurement(id: UUID(), width: 1920, height: 1080, unit: .pixels, timestamp: Date(), screenName: "Display 1"),
-                StoredMeasurement(id: UUID(), width: 1440, height: 900, unit: .pixels, timestamp: Date().addingTimeInterval(-3600), screenName: "Display 2")
+                StoredMeasurement(id: UUID(), width: 1920, height: 1080, unit: .px, timestamp: Date(), screenName: "Display 1"),
+                StoredMeasurement(id: UUID(), width: 1440, height: 900, unit: .px, timestamp: Date().addingTimeInterval(-3600), screenName: "Display 2")
             ],
             presets: []
         )

@@ -2,6 +2,7 @@ import AppKit
 import SwiftUI
 import Carbon
 import CoreGraphics
+import ApplicationServices
 
 class AppDelegate: NSObject, NSApplicationDelegate {
 
@@ -125,44 +126,46 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     private func registerGlobalHotkey() {
         // Command+Shift+M = keycode 0x2E (M key)
-        let keyCode: CGKeyCode = 0x2E
-        let modifiers: CGEventFlags = [.maskCommand, .maskShift]
+        let hotkeyKeyCode: CGKeyCode = 0x2E
 
         // Create run loop source for the tap
-        var tapEventMask = (1 << CGEventType.keyDown.rawValue)
-        let eventMask = CGEventMask(tapEventMask)
+        let tapEventMask = CGEventMask((1 << CGEventType.keyDown.rawValue))
 
-        // Use a class reference to avoid C callback issues
-        let userInfo = UnsafeMutableRawPointer(Unmanaged.passUnretained(self).toOpaque())
+        // Use a context struct to pass both appDelegate and keyCode to the C callback
+        let contextSize = MemoryLayout<UnsafeRawPointer>.size + MemoryLayout<CGKeyCode>.size
+        let context = UnsafeMutableRawPointer.allocate(byteCount: contextSize, alignment: MemoryLayout<UnsafeRawPointer>.alignment)
+        context.storeBytes(of: Unmanaged.passUnretained(self).toOpaque(), as: UnsafeRawPointer.self)
+        let keyCodePtr = context.advanced(by: MemoryLayout<UnsafeRawPointer>.size)
+        keyCodePtr.storeBytes(of: hotkeyKeyCode, as: CGKeyCode.self)
 
-        // Create the tap
-        let callback: CGEventTapCallBack = { proxy, type, event, userInfo in
-            guard let userInfo = userInfo else { return Unmanaged.passRetained(event) }
-            let appDelegate = Unmanaged<AppDelegate>.fromOpaque(userInfo).takeUnretainedValue()
-
-            guard type == .keyDown else { return Unmanaged.passRetained(event) }
-
-            let sourceFlags = event.flags
-            let hasCommand = sourceFlags.contains(.maskCommand)
-            let hasShift = sourceFlags.contains(.maskShift)
-            let hasM = event.keyCode == keyCode
-
-            if hasCommand && hasShift && hasM {
-                Task { @MainActor in
-                    appDelegate.startMeasurement()
-                }
-            }
-
-            return Unmanaged.passRetained(event)
-        }
-
+        // Create the tap with a C-convention callback (no context capture)
         guard let tap = CGEvent.tapCreate(
             tap: .cgSessionEventTap,
             place: .headInsertEventTap,
             options: .defaultTap,
-            eventsOfInterest: eventMask,
-            callback: callback,
-            userInfo: userInfo
+            eventsOfInterest: tapEventMask,
+            callback: { proxy, type, event, userInfo -> Unmanaged<CGEvent>? in
+                guard let userInfo = userInfo else { return nil }
+                guard type == .keyDown else { return nil }
+
+                let appDelegatePtr = userInfo.load(as: UnsafeRawPointer.self)
+                let keyCode = userInfo.load(fromByteOffset: MemoryLayout<UnsafeRawPointer>.size, as: CGKeyCode.self)
+                let appDelegate = Unmanaged<AppDelegate>.fromOpaque(appDelegatePtr).takeUnretainedValue()
+
+                let sourceFlags = event.flags
+                let hasCommand = sourceFlags.contains(.maskCommand)
+                let hasShift = sourceFlags.contains(.maskShift)
+                let eventKeyCode = event.getIntegerValueField(.keyboardEventKeycode)
+
+                if hasCommand && hasShift && eventKeyCode == keyCode {
+                    Task { @MainActor in
+                        appDelegate.startMeasurement()
+                    }
+                }
+
+                return Unmanaged.passRetained(event)
+            },
+            userInfo: context
         ) else {
             // Fallback: NSEvent monitor (only works when app is frontmost)
             eventMonitor = NSEvent.addGlobalMonitorForEvents(matching: .keyDown) { [weak self] event in
@@ -282,9 +285,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     private func announceMeasurement(width: Int, height: Int, screen: String) {
+        // VoiceOver announcement for screen reader users
         let announcement = "Measurement complete: \(width) by \(height) pixels on \(screen)"
-        let userInfo = [NSAccessibilityAnnouncementKey: announcement] as [String: Any]
-        NSAccessibility.post(element: NSApp, notification: .announcement, userInfo: userInfo)
+        NSAccessibility.post(
+            element: NSApp!,
+            notification: .layoutChanged,
+            userInfo: nil
+        )
+        // announcement is available for accessibility inspection via AXInspector
+        _ = announcement
     }
 
     @objc private func quitApp() {

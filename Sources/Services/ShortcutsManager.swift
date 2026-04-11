@@ -1,4 +1,5 @@
 import AppIntents
+import AppKit
 import Foundation
 
 // MARK: - App Shortcuts Provider
