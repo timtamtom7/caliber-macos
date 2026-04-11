@@ -32,5 +32,11 @@
 	<true/>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Caliber uses the local network to expose a REST API for integrations and automation.</string>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_caliber._tcp</string>
+	</array>
 </dict>
 </plist>

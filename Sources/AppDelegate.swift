@@ -1,6 +1,7 @@
 import AppKit
 import SwiftUI
 import Carbon
+import CoreGraphics
 
 class AppDelegate: NSObject, NSApplicationDelegate {
 
@@ -8,7 +9,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var popover: NSPopover!
     private var measurementOverlayWindows: [MeasurementOverlayWindow] = []
     private var eventMonitor: Any?
-    private var globalHotkeyMonitor: Any?
+    private var hotkeyTap: CFMachPort?
 
     let measurementStore = MeasurementStore()
 
@@ -21,6 +22,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         registerGlobalHotkey()
         setupEventMonitor()
         buildMenu()
+
+        // Load subscription products and status
+        if #available(macOS 13.0, *) {
+            Task {
+                await CaliberSubscriptionManager.shared.loadProducts()
+                await CaliberSubscriptionManager.shared.updateStatus()
+            }
+        }
     }
 
     // MARK: - Status Item
@@ -115,20 +124,66 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // MARK: - Global Hotkey (⌘⇧M)
 
     private func registerGlobalHotkey() {
-        // Use NSEvent global monitor for Command+Shift+M
-        globalHotkeyMonitor = NSEvent.addGlobalMonitorForEvents(matching: .keyDown) { [weak self] event in
-            // Check for Command+Shift+M
-            let flags = event.modifierFlags.intersection(.deviceIndependentFlagsMask)
-            let hasCommand = flags.contains(.command)
-            let hasShift = flags.contains(.shift)
-            let hasM = event.keyCode == 0x2E // M key
+        // Command+Shift+M = keycode 0x2E (M key)
+        let keyCode: CGKeyCode = 0x2E
+        let modifiers: CGEventFlags = [.maskCommand, .maskShift]
+
+        // Create run loop source for the tap
+        var tapEventMask = (1 << CGEventType.keyDown.rawValue)
+        let eventMask = CGEventMask(tapEventMask)
+
+        // Use a class reference to avoid C callback issues
+        let userInfo = UnsafeMutableRawPointer(Unmanaged.passUnretained(self).toOpaque())
+
+        // Create the tap
+        let callback: CGEventTapCallBack = { proxy, type, event, userInfo in
+            guard let userInfo = userInfo else { return Unmanaged.passRetained(event) }
+            let appDelegate = Unmanaged<AppDelegate>.fromOpaque(userInfo).takeUnretainedValue()
+
+            guard type == .keyDown else { return Unmanaged.passRetained(event) }
+
+            let sourceFlags = event.flags
+            let hasCommand = sourceFlags.contains(.maskCommand)
+            let hasShift = sourceFlags.contains(.maskShift)
+            let hasM = event.keyCode == keyCode
 
             if hasCommand && hasShift && hasM {
-                DispatchQueue.main.async {
-                    self?.startMeasurement()
+                Task { @MainActor in
+                    appDelegate.startMeasurement()
                 }
             }
+
+            return Unmanaged.passRetained(event)
         }
+
+        guard let tap = CGEvent.tapCreate(
+            tap: .cgSessionEventTap,
+            place: .headInsertEventTap,
+            options: .defaultTap,
+            eventsOfInterest: eventMask,
+            callback: callback,
+            userInfo: userInfo
+        ) else {
+            // Fallback: NSEvent monitor (only works when app is frontmost)
+            eventMonitor = NSEvent.addGlobalMonitorForEvents(matching: .keyDown) { [weak self] event in
+                let flags = event.modifierFlags.intersection(.deviceIndependentFlagsMask)
+                let hasCommand = flags.contains(.command)
+                let hasShift = flags.contains(.shift)
+                let hasM = event.keyCode == 0x2E
+
+                if hasCommand && hasShift && hasM {
+                    Task { @MainActor in
+                        self?.startMeasurement()
+                    }
+                }
+            }
+            return
+        }
+
+        hotkeyTap = tap
+        let runLoopSource = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, tap, 0)
+        CFRunLoopAddSource(CFRunLoopGetMain(), runLoopSource, .commonModes)
+        CGEvent.tapEnable(tap: tap, enable: true)
     }
 
     // MARK: - Event Monitor (Escape to cancel, click outside popover)
@@ -192,6 +247,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         // Copy to clipboard: W×H format
         copyToClipboard(width: widthPx, height: heightPx)
+
+        // VoiceOver announcement for accessibility
+        announceMeasurement(width: widthPx, height: heightPx, screen: screen.localizedName)
     }
 
     private func closeOverlayWindows() {
@@ -221,6 +279,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.image = originalImage
             button.image?.isTemplate = true
         }
+    }
+
+    private func announceMeasurement(width: Int, height: Int, screen: String) {
+        let announcement = "Measurement complete: \(width) by \(height) pixels on \(screen)"
+        let userInfo = [NSAccessibilityAnnouncementKey: announcement] as [String: Any]
+        NSAccessibility.post(element: NSApp, notification: .announcement, userInfo: userInfo)
     }
 
     @objc private func quitApp() {

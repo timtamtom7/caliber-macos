@@ -11,34 +11,36 @@ final class MeasurementIntelligence {
     // MARK: - Object Detection
     
     /// Detect objects in an image and suggest measurement points
-    func detectObjects(in image: CGImage, completion: @escaping ([DetectedObject]) -> Void) {
-        let request = VNDetectRectanglesRequest { request, error in
-            guard error == nil,
-                  let results = request.results as? [VNRectangleObservation] else {
-                completion([])
-                return
+    func detectObjects(in image: CGImage) async -> [DetectedObject] {
+        await withCheckedContinuation { continuation in
+            let request = VNDetectRectanglesRequest { request, error in
+                guard error == nil,
+                      let results = request.results as? [VNRectangleObservation] else {
+                    continuation.resume(returning: [])
+                    return
+                }
+                
+                let objects = results.map { observation -> DetectedObject in
+                    DetectedObject(
+                        boundingBox: observation.boundingBox,
+                        confidence: Double(observation.confidence),
+                        type: .rectangle
+                    )
+                }
+                
+                continuation.resume(returning: objects)
             }
             
-            let objects = results.map { observation -> DetectedObject in
-                DetectedObject(
-                    boundingBox: observation.boundingBox,
-                    confidence: Double(observation.confidence),
-                    type: .rectangle
-                )
-            }
+            request.minimumAspectRatio = 0.1
+            request.maximumAspectRatio = 10.0
+            request.minimumSize = 0.1
+            request.maximumObservations = 20
             
-            completion(objects)
-        }
-        
-        request.minimumAspectRatio = 0.1
-        request.maximumAspectRatio = 10.0
-        request.minimumSize = 0.1
-        request.maximumObservations = 20
-        
-        let handler = VNImageRequestHandler(cgImage: image, options: [:])
-        
-        DispatchQueue.global(qos: .userInitiated).async {
-            try? handler.perform([request])
+            let handler = VNImageRequestHandler(cgImage: image, options: [:])
+            
+            DispatchQueue.global(qos: .userInitiated).async {
+                try? handler.perform([request])
+            }
         }
     }
     

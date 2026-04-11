@@ -125,6 +125,8 @@ struct MeasureTabView: View {
                 .foregroundColor(.secondary)
         }
         .padding(.vertical, 12)
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("No measurements recorded. Press Command Shift M to start measuring.")
     }
 
     private var actionButtons: some View {
@@ -141,7 +143,7 @@ struct MeasureTabView: View {
                 }
             }
 
-            ActionButton(title: "Quit", systemImage: "xmark.circle", style: .destructive) {
+            ActionButton(title: "Quit Caliber", systemImage: "xmark.circle", style: .destructive) {
                 onQuit()
             }
         }
@@ -348,6 +350,7 @@ struct SettingsTabView: View {
                         }
 
                         Slider(value: $measurementStore.dpi, in: 72...480, step: 1)
+                            .accessibilityLabel("Screen DPI, \(Int(measurementStore.dpi)) points per inch")
 
                         HStack {
                             Text("72 (iPad)")
@@ -413,6 +416,8 @@ struct ActionButton: View {
             .cornerRadius(8)
         }
         .buttonStyle(.plain)
+        .accessibilityLabel(title)
+        .accessibilityHint(accessibilityHintText)
     }
 
     private var backgroundColor: Color {
@@ -434,6 +439,17 @@ struct ActionButton: View {
             return .primary
         case .destructive:
             return .red
+        }
+    }
+
+    private var accessibilityHintText: String {
+        switch style {
+        case .primary:
+            return "Triggers screen measurement mode"
+        case .secondary:
+            return "Copies the last measurement to clipboard"
+        case .destructive:
+            return "Quits the Caliber application"
         }
     }
 }

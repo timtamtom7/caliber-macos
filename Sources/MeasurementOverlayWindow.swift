@@ -4,12 +4,14 @@ import SwiftUI
 class MeasurementOverlayWindow: NSWindow {
 
     private let measurementStore: MeasurementStore
+    private let scaleFactor: CGFloat
     private var startPoint: NSPoint?
     private var currentPoint: NSPoint?
     private var overlayView: MeasurementOverlayView!
 
     init(screen: NSScreen, measurementStore: MeasurementStore) {
         self.measurementStore = measurementStore
+        self.scaleFactor = screen.backingScaleFactor
 
         super.init(
             contentRect: screen.frame,
@@ -26,7 +28,7 @@ class MeasurementOverlayWindow: NSWindow {
         self.acceptsMouseMovedEvents = true
         self.collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary]
 
-        overlayView = MeasurementOverlayView(frame: screen.frame)
+        overlayView = MeasurementOverlayView(frame: screen.frame, scaleFactor: scaleFactor)
         overlayView.onComplete = { [weak self] width, height in
             self?.completeMeasurement(width: width, height: height, screen: screen)
         }
@@ -41,13 +43,17 @@ class MeasurementOverlayWindow: NSWindow {
     override var canBecomeMain: Bool { true }
 
     private func completeMeasurement(width: CGFloat, height: CGFloat, screen: NSScreen) {
-        guard let appDelegate = NSApp.delegate as? AppDelegate else { return }
-        appDelegate.finishMeasurement(width: width, height: height, screen: screen)
+        Task { @MainActor in
+            guard let appDelegate = NSApp.delegate as? AppDelegate else { return }
+            appDelegate.finishMeasurement(width: width, height: height, screen: screen)
+        }
     }
 
     private func cancelMeasurement() {
-        guard let appDelegate = NSApp.delegate as? AppDelegate else { return }
-        appDelegate.cancelMeasurement()
+        Task { @MainActor in
+            guard let appDelegate = NSApp.delegate as? AppDelegate else { return }
+            appDelegate.cancelMeasurement()
+        }
     }
 }
 
@@ -61,11 +67,22 @@ class MeasurementOverlayView: NSView {
     private var startPoint: NSPoint?
     private var currentPoint: NSPoint?
     private var isDragging = false
+    private let scaleFactor: CGFloat
 
     private let selectionColor = NSColor(calibratedRed: 0.0, green: 0.478, blue: 1.0, alpha: 0.2) // #007AFF 20%
     private let strokeColor = NSColor.white
     private let labelBackgroundColor = NSColor(calibratedWhite: 0.1, alpha: 0.85)
     private let cornerHandleSize: CGFloat = 8
+
+    init(frame: NSRect, scaleFactor: CGFloat) {
+        self.scaleFactor = scaleFactor
+        super.init(frame: frame)
+    }
+
+    required init?(coder: NSCoder) {
+        self.scaleFactor = NSScreen.main?.backingScaleFactor ?? 2.0
+        super.init(coder: coder)
+    }
 
     override var acceptsFirstResponder: Bool { true }
 
@@ -183,7 +200,6 @@ class MeasurementOverlayView: NSView {
     }
 
     private func drawDimensionLabel(for rect: NSRect, width: CGFloat, height: CGFloat) {
-        let scaleFactor = NSScreen.main?.backingScaleFactor ?? 2.0
         let widthPx = Int(width)
         let heightPx = Int(height)
         let widthPt = Int(width / scaleFactor)

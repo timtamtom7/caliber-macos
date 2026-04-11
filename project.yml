@@ -21,6 +21,8 @@ targets:
     platform: macOS
     sources:
       - Sources
+      - path: PrivacyInfo.xcprivacy
+        buildPhase: none
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.caliber.app

@@ -30,13 +30,50 @@ struct StoredPreset: Codable, Identifiable {
     let unit: MeasurementUnit
 }
 
-enum MeasurementUnit: String, Codable {
-    case pixels = "px"
-    case points = "pt"
-    case inches = "in"
-    case centimeters = "cm"
-    
+enum MeasurementUnit: String, Codable, CaseIterable {
+    case px = "px"
+    case pt = "pt"
+    case inch = "inch"
+    case cm = "cm"
+    case mm = "mm"
+
+    var displayName: String {
+        switch self {
+        case .px: return "Pixels"
+        case .pt: return "Points"
+        case .inch: return "Inches"
+        case .cm: return "Centimeters"
+        case .mm: return "Millimeters"
+        }
+    }
+
+    var shortName: String {
+        rawValue
+    }
+
     var suffix: String { rawValue }
+
+    // Convert pt to this unit
+    func fromPt(_ pt: Double, dpi: Double = 72) -> Double {
+        switch self {
+        case .px: return pt * dpi / 72
+        case .pt: return pt
+        case .inch: return pt / 72
+        case .cm: return pt / 72 * 2.54
+        case .mm: return pt / 72 * 25.4
+        }
+    }
+
+    // Convert to pt from this unit
+    func toPt(_ value: Double, dpi: Double = 72) -> Double {
+        switch self {
+        case .px: return value * 72 / dpi
+        case .pt: return value
+        case .inch: return value * 72
+        case .cm: return value / 2.54 * 72
+        case .mm: return value / 25.4 * 72
+        }
+    }
 }
 
 // MARK: - Timeline Provider

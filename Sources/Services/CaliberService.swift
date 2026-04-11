@@ -170,12 +170,12 @@ final class CaliberAPIService: ObservableObject {
         connection.receive(minimumIncompleteLength: 1, maximumLength: 65536) { [weak self] data, _, _, error in
             guard let data = data, error == nil else { return }
             Task { @MainActor in
-                self?.processRequest(data, connection: connection)
+                await self?.processRequest(data, connection: connection)
             }
         }
     }
 
-    private func processRequest(_ data: Data, connection: NWConnection) {
+    private func processRequest(_ data: Data, connection: NWConnection) async {
         guard let request = String(data: data, encoding: .utf8) else {
             sendResponse(status: 400, body: "{\"error\":\"Bad Request\"}", connection: connection)
             return

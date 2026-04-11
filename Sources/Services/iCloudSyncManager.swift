@@ -112,9 +112,11 @@ final class CaliberSyncManager: ObservableObject {
     }
 
     private func handleExternalChange() {
-        pullFromCloud()
-        syncStatus = .synced
-        lastSynced = Date()
+        Task { @MainActor in
+            self.pullFromCloud()
+            self.syncStatus = .synced
+            self.lastSynced = Date()
+        }
     }
 
     var isICloudAvailable: Bool {

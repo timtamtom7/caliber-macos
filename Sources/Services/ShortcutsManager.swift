@@ -55,7 +55,15 @@ struct StartMeasuringIntent: AppIntent {
     static var openAppWhenRun: Bool = true
 
     func perform() async throws -> some IntentResult & ProvidesDialog {
-        await CaliberState.shared.store?.startMeasuring()
+        // Trigger the full measurement flow by calling AppDelegate directly
+        // This shows overlay windows and sets up the crosshair cursor
+        if let appDelegate = NSApp.delegate as? AppDelegate {
+            await MainActor.run {
+                appDelegate.startMeasurement()
+            }
+        } else {
+            await CaliberState.shared.store?.startMeasuring()
+        }
         return .result(dialog: "Caliber measuring mode started")
     }
 }
